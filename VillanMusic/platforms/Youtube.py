@@ -25,16 +25,6 @@ from VillanMusic import LOGGER
 API_URL = "https://teaminflex.xyz"  # Change to your API server URL
 API_KEY = "INFLEX03922328D"
 
-def cookie_txt_file():
-    cookie_dir = f"{os.getcwd()}/cookies"
-    if not os.path.exists(cookie_dir):
-        return None
-    cookies_files = [f for f in os.listdir(cookie_dir) if f.endswith(".txt")]
-    if not cookies_files:
-        return None
-    cookie_file = os.path.join(cookie_dir, random.choice(cookies_files))
-    return cookie_file
-
 # ==============================================
 # 🎵 AUDIO DOWNLOAD (Safe JSON + 200 Retry)
 # ==============================================
